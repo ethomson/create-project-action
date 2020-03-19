@@ -2023,12 +2023,12 @@ const github = __importStar(__webpack_require__(469));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const token = process.env.GITHUB_TOKEN || '';
+            const token = core.getInput('token') || process.env.GITHUB_TOKEN || '';
             const projectName = core.getInput('name', { required: true });
             const projectDescription = core.getInput('description');
             const columns = core.getInput('columns');
             const octokit = new github.GitHub(token);
-            var response;
+            let response;
             if (core.getInput('org')) {
                 response = yield octokit.projects.createForOrg({
                     org: core.getInput('org'),
@@ -2037,7 +2037,7 @@ function run() {
                 });
             }
             else {
-                var repo = core.getInput('repo');
+                let repo = core.getInput('repo');
                 if (!repo && !(repo = process.env.GITHUB_REPOSITORY))
                     throw new Error('could not determine correct repository');
                 if (!repo.includes('/'))
