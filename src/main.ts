@@ -3,7 +3,7 @@ import * as github from '@actions/github'
 
 async function run(): Promise<void> {
     try {
-        const token = process.env.GITHUB_TOKEN || ''
+        const token = core.getInput('token') || process.env.GITHUB_TOKEN || ''
         const projectName = core.getInput('name', { required: true })
         const projectDescription = core.getInput('description')
         const columns = core.getInput('columns')

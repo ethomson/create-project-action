@@ -8,11 +8,13 @@ inputs:
   description:
     description: The description of the project
   repo:
-    description: The repository to create the project in (defaults to the repository running the action).
+    description: The repository to create the project in (defaults to the repository running the action)
   org:
     description: The organization to create the project in
   columns:
     description: A list of columns (comma-separated) to create in the new project
+  token:
+    description: The authentication token to use (defaults to GITHUB_TOKEN environment variable)
 runs:
   using: 'node12'
   main: 'dist/index.js'
