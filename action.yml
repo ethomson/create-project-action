@@ -1,0 +1,21 @@
+name: 'Create Project Action'
+description: 'Create a GitHub project in a repository or organization'
+author: 'Edward Thomson'
+inputs:
+  name:
+    description: The name of the project
+    required: true
+  description:
+    description: The description of the project
+  repo:
+    description: The repository to create the project in (defaults to the repository running the action).
+  org:
+    description: The organization to create the project in
+  columns:
+    description: A list of columns (comma-separated) to create in the new project
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: paperclip
+  color: blue

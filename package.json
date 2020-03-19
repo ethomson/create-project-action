@@ -1,0 +1,42 @@
+{
+  "name": "create-project-action",
+  "version": "0.0.1",
+  "description": "Create a GitHub Project",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build",
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethomson/create-project-action.git"
+  },
+  "keywords": [
+    "GitHub",
+    "actions",
+    "project",
+    "board"
+  ],
+  "author": "Edward Thomson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ethomson/create-project-action/issues"
+  },
+  "homepage": "https://github.com/ethomson/create-project-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-github": "^3.4.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "ncc": "^0.3.6",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  }
+}
