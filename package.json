@@ -1,6 +1,6 @@
 {
   "name": "create-project-action",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create a GitHub Project",
   "main": "lib/main.js",
   "scripts": {

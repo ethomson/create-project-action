@@ -2058,6 +2058,7 @@ function run() {
                     });
                 }
             }
+            core.setOutput('url', response.data.html_url);
         }
         catch (err) {
             core.setFailed(err.message);
